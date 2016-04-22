@@ -84,13 +84,14 @@
     </CudaCompile>
     <ClCompile>
       <DisableSpecificWarnings>4661;4005;4812;4715;%(DisableSpecificWarnings)</DisableSpecificWarnings>
-      <AdditionalIncludeDirectories>$(ProjectDir)\..\..\src\;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>$(ProjectDir)\..\..\src\;D:\Xingyi\Human_Pose_Estimation\libs\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ClCompile>
     <Lib>
       <AdditionalOptions>/ignore:4221 %(AdditionalOptions)</AdditionalOptions>
     </Lib>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="..\..\..\libs\src\weighted_mean_point2d_l2_loss.cpp" />
     <ClCompile Include="..\..\src\caffe\blob.cpp" />
     <ClCompile Include="..\..\src\caffe\common.cpp" />
     <ClCompile Include="..\..\src\caffe\data_reader.cpp" />
@@ -190,6 +191,7 @@
     <ClCompile Include="..\..\src\caffe\util\upgrade_proto.cpp" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="..\..\..\libs\include\caffe\weighted_mean_point2d_l2_loss.hpp" />
     <ClInclude Include="..\..\include\caffe\blob.hpp" />
     <ClInclude Include="..\..\include\caffe\caffe.hpp" />
     <ClInclude Include="..\..\include\caffe\common.hpp" />

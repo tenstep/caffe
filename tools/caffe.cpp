@@ -389,6 +389,8 @@ RegisterBrewFunction(time);
 
 int main(int argc, char** argv) {
   // Print output to stderr (while still logging).
+  FLAGS_log_dir = ".\\logs\\";
+  system("mkdir .\\logs\\");
   FLAGS_alsologtostderr = 1;
   // Set version
   gflags::SetVersionString(AS_STRING(CAFFE_VERSION));
