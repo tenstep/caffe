@@ -48,7 +48,7 @@
     </Link>
     <ClCompile>
       <DisableSpecificWarnings>4005;%(DisableSpecificWarnings)</DisableSpecificWarnings>
-      <AdditionalIncludeDirectories>$(ProjectDir)\..\..\src;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>$(ProjectDir)\..\..\src;D:\Projects\Human_Pose_Estimation\libs\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ClCompile>
     <CudaCompile>
       <TargetMachinePlatform>64</TargetMachinePlatform>
@@ -64,7 +64,7 @@
     </Link>
     <ClCompile>
       <DisableSpecificWarnings>4005;%(DisableSpecificWarnings)</DisableSpecificWarnings>
-      <AdditionalIncludeDirectories>$(ProjectDir)\..\..\src;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>$(ProjectDir)\..\..\src;D:\Projects\Human_Pose_Estimation\libs\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ClCompile>
     <CudaCompile>
       <TargetMachinePlatform>64</TargetMachinePlatform>
@@ -73,6 +73,10 @@
     </CudaCompile>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="..\..\..\libs\test\test_fast_render_layer.cpp" />
+    <ClCompile Include="..\..\..\libs\test\test_human_model_v2_layer.cpp" />
+    <ClCompile Include="..\..\..\libs\test\test_render_layer.cpp" />
+    <ClCompile Include="..\..\..\libs\test\test_rerange_layer.cpp" />
     <ClCompile Include="..\..\src\caffe\test\test_accuracy_layer.cpp" />
     <ClCompile Include="..\..\src\caffe\test\test_argmax_layer.cpp" />
     <ClCompile Include="..\..\src\caffe\test\test_batch_norm_layer.cpp" />

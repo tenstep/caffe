@@ -61,7 +61,7 @@
     </CudaCompile>
     <ClCompile>
       <DisableSpecificWarnings>4661;4005;4812;4715;%(DisableSpecificWarnings)</DisableSpecificWarnings>
-      <AdditionalIncludeDirectories>$(ProjectDir)\..\..\src\;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>$(ProjectDir)\..\..\src\;D:\Projects\Human_Pose_Estimation\libs\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ClCompile>
     <Lib>
       <AdditionalOptions>/ignore:4221 %(AdditionalOptions)</AdditionalOptions>
@@ -84,13 +84,27 @@
     </CudaCompile>
     <ClCompile>
       <DisableSpecificWarnings>4661;4005;4812;4715;%(DisableSpecificWarnings)</DisableSpecificWarnings>
-      <AdditionalIncludeDirectories>$(ProjectDir)\..\..\src\;D:\Xingyi\Human_Pose_Estimation\libs\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>$(ProjectDir)\..\..\src\;D:\Projects\Human_Pose_Estimation\libs\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ClCompile>
     <Lib>
       <AdditionalOptions>/ignore:4221 %(AdditionalOptions)</AdditionalOptions>
     </Lib>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="..\..\..\libs\src\crop_joint_layer.cpp" />
+    <ClCompile Include="..\..\..\libs\src\deep_hand_model_dof_constraint_loss.cpp" />
+    <ClCompile Include="..\..\..\libs\src\deep_hand_model_layers.cpp" />
+    <ClCompile Include="..\..\..\libs\src\direction_layer.cpp" />
+    <ClCompile Include="..\..\..\libs\src\fast_render_layer.cpp" />
+    <ClCompile Include="..\..\..\libs\src\human_model_v2_layer.cpp" />
+    <ClCompile Include="..\..\..\libs\src\IEF_layer.cpp" />
+    <ClCompile Include="..\..\..\libs\src\joint_disturb_layer.cpp" />
+    <ClCompile Include="..\..\..\libs\src\random_disturb_layer.cpp" />
+    <ClCompile Include="..\..\..\libs\src\render_layer.cpp" />
+    <ClCompile Include="..\..\..\libs\src\render_limb_layer.cpp" />
+    <ClCompile Include="..\..\..\libs\src\rerange_layer.cpp" />
+    <ClCompile Include="..\..\..\libs\src\schedule_layer.cpp" />
+    <ClCompile Include="..\..\..\libs\src\stacked_mask_layer.cpp" />
     <ClCompile Include="..\..\..\libs\src\weighted_mean_point2d_l2_loss.cpp" />
     <ClCompile Include="..\..\src\caffe\blob.cpp" />
     <ClCompile Include="..\..\src\caffe\common.cpp" />
@@ -191,6 +205,20 @@
     <ClCompile Include="..\..\src\caffe\util\upgrade_proto.cpp" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="..\..\..\libs\include\caffe\crop_joint_layer.hpp" />
+    <ClInclude Include="..\..\..\libs\include\caffe\deep_hand_model_layers.hpp" />
+    <ClInclude Include="..\..\..\libs\include\caffe\direction_layer.hpp" />
+    <ClInclude Include="..\..\..\libs\include\caffe\fast_render_layer.hpp" />
+    <ClInclude Include="..\..\..\libs\include\caffe\HandDefine.h" />
+    <ClInclude Include="..\..\..\libs\include\caffe\human_model_v2_layer.hpp" />
+    <ClInclude Include="..\..\..\libs\include\caffe\IEF_layer.hpp" />
+    <ClInclude Include="..\..\..\libs\include\caffe\joint_disturb_layer.hpp" />
+    <ClInclude Include="..\..\..\libs\include\caffe\random_disturb_layer.hpp" />
+    <ClInclude Include="..\..\..\libs\include\caffe\render_layer.hpp" />
+    <ClInclude Include="..\..\..\libs\include\caffe\render_limb_layer.hpp" />
+    <ClInclude Include="..\..\..\libs\include\caffe\rerange_layer.hpp" />
+    <ClInclude Include="..\..\..\libs\include\caffe\schedule_layer.hpp" />
+    <ClInclude Include="..\..\..\libs\include\caffe\stacked_mask_layer.hpp" />
     <ClInclude Include="..\..\..\libs\include\caffe\weighted_mean_point2d_l2_loss.hpp" />
     <ClInclude Include="..\..\include\caffe\blob.hpp" />
     <ClInclude Include="..\..\include\caffe\caffe.hpp" />

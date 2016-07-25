@@ -306,7 +306,7 @@ message ParamSpec {
 // NOTE
 // Update the next available ID when you add a new LayerParameter field.
 //
-// LayerParameter next available layer-specific ID: 145 (last added: crop_param)
+// LayerParameter next available layer-specific ID: 147 (last added: weighted_loss_param)
 message LayerParameter {
   optional string name = 1; // the layer name
   optional string type = 2; // the layer type
@@ -396,6 +396,74 @@ message LayerParameter {
   optional ThresholdParameter threshold_param = 128;
   optional TileParameter tile_param = 138;
   optional WindowDataParameter window_data_param = 129;
+  optional RenderParameter render_param = 145;
+  optional WeightedLossParameter weighted_loss_param = 146;
+  optional DisturbParameter disturb_param = 147; 
+  optional DirectionParameter direction_param = 148;
+  optional IEFParameter ief_param = 149;
+  optional Libxyz_lossParameter libxyz_loss_param = 150;
+  optional LibhandParameter libhand_param = 151;
+  optional ScheduleParameter schedule_param = 152;
+  optional HumanModelv2Parameter human_model_v2_param = 153;
+}
+
+
+message HumanModelv2Parameter {
+  optional bool learn_scale = 1 [default = true];
+  optional string shape_file = 2 [default = ""];
+  optional string constraint_file = 3 [default = ""];
+}
+
+message ScheduleParameter {
+  optional int32 max_iters = 1 [default = 100000];
+  optional string schedule_type = 2 [default = "LINEAR"];
+  optional float es = 3 [default = 1.0];
+  optional float ee = 4 [default = 0.1];
+  optional int32 start_iter = 5 [default = 0];
+}
+
+message Libxyz_lossParameter {
+  optional string model = 1 [default = "LIBHAND"];
+}
+
+message LibhandParameter {
+  optional float scale = 1 [default = 1];
+}
+
+message IEFParameter {
+  optional int32 num_iters = 1 [default = 10000];
+  optional int32 threshold = 2 [default = 20];
+  optional float ratio = 3 [default = 112];
+  optional int32 start_iter = 4 [default = 0];
+  optional int32 num_stages = 5 [default = 5];
+  optional bool consolid = 6 [default = false];
+}
+
+message DirectionParameter {
+  optional float threshold = 1 [default = 5];
+  optional float ratio = 2 [default = 112];
+}
+
+message DisturbParameter {
+  optional float mean = 1 [default = 0];
+  optional float std = 2 [default = 0.1];
+  optional float scale_range = 3 [default = 0.2];
+  optional float rotate_range = 4 [default = 20.0];
+  optional float shift_range = 5 [default = 10.0];
+  optional int32 center_joint_id = 6 [default = 7];
+}
+
+message WeightedLossParameter {
+  optional string weight_type = 1 [default = "default"];
+}
+
+message RenderParameter {
+  optional float k = 1 [default = 100];
+  optional float t = 2 [default = -50];
+  optional float sigma = 3 [default = 20];
+  optional int32 img_size = 4 [default = 224];
+  optional bool transpose = 5 [default = false];
+  optional float ratio = 6 [default = 224];
 }
 
 // Message that stores parameters used to apply transformation
